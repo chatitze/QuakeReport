@@ -4,19 +4,19 @@ import java.util.Date;
 
 public class Earthquake {
 
-    private float mMagnitude;
+    private String mMagnitude;
 
     private String mLocation;
 
-    private Date mDate;
+    private String mDate;
 
-    public Earthquake(float mMagnitude, String mCity, Date mDate) {
+    public Earthquake(String mMagnitude, String mCity, String mDate) {
         this.mMagnitude = mMagnitude;
         this.mLocation = mCity;
         this.mDate = mDate;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return mDate;
     }
 
@@ -24,7 +24,7 @@ public class Earthquake {
         return mLocation;
     }
 
-    public float getMagnitude() {
+    public String getMagnitude() {
         return mMagnitude;
     }
 

@@ -35,18 +35,17 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
         TextView magnitude_text_view = (TextView) listItemView.findViewById(R.id.magnitude);
 
-        magnitude_text_view.setText(Float.toString(currentEarthquake.getMagnitude()));
+        magnitude_text_view.setText(currentEarthquake.getMagnitude());
 
-        TextView city_text_view = (TextView) listItemView.findViewById(R.id.primary_location);
+
+        TextView city_text_view = (TextView) listItemView.findViewById(R.id.location);
 
         city_text_view.setText(currentEarthquake.getLocation());
 
-        Format formatter = new SimpleDateFormat("MMM dd, yyyy");
-        String sDate = formatter.format(currentEarthquake.getDate());
 
         TextView date_text_view = (TextView) listItemView.findViewById(R.id.date);
 
-        date_text_view.setText(sDate);
+        date_text_view.setText(currentEarthquake.getDate());
 
         return listItemView;
     }
