@@ -61,8 +61,10 @@ public final class QueryUtils {
                 String location  = currentEarthquake.getString("place");
                 // Extract the value for the key called "time"
                 long time = currentEarthquake.getLong("time");
+                // Extract the value for the key called "url"
+                String url = currentEarthquake.getString("url");
 
-                Earthquake newEarthQuake = new Earthquake(magnitude,location,time);
+                Earthquake newEarthQuake = new Earthquake(magnitude,location,time,url);
                 earthquakes.add(newEarthQuake);
             }
 
